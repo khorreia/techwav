@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'malberg';
+    src: url(../Midea/Fontes/MalbergTrial-Heavy.ttf);
+}
+@font-face {
+    font-family: 'nexa';
+    src: url(../Midea/Fontes/Nexa-Heavy.ttf);
+}
+
+:root{
+    --cor0: #31405f;
+    --cor1: #094152;
+    --cor2: #194f6b;
+    --cor3: #bfc6cc;
+    --cor4: #c995a2;
+
+    --font-logo: 'malberg'; 
+    --font-destaque: 'nexa';
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: var(--cor3);
+    font-family: sans-serif;
+}
+
+header{
+    background-color: transparent;
+    padding-top: 20px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.logo{
+    font-size: 2em;
+    font-family: var(--font-logo);
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--cor1); 
+    border-bottom: 1px solid #ccc; 
+    z-index: 1000; 
+    padding-top: 10px;
+}
+
+body {
+    margin-top: 60px; /* Ajuste o valor para a altura do cabeçalho para evitar que o conteúdo seja ocultado por ele */
+}
+
+
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+.nav-list li{
+    letter-spacing: 2px;
+    margin-left: 32px;
+    font-family: sans-serif;
+    border-radius: 10px;
+}
+
+.conteiner{
+    padding: 32px;
+}
+.slider-wrapper{
+    position: relative;
+    max-width: 768px;
+    margin: 0 auto;
+}
+.slider{
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+.slider-nav{
+    display: flex;
+    column-gap: 16px;
+    position: absolute;
+    bottom: 20px;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+main{
+    margin: 40px 10px;
+}
+main h1{
+    font-family: 'nexa';
+    margin: 30px;
+}
+
+.destaque{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.destaque #iten{
+    padding: 10px;
+    background-color: var(--cor2);
+    max-width: 23%;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.514);
+}
+#iten h2{
+    font-family: var(--font-destaque);
+    margin-bottom: 5px;
+}
+.destaque #legenda{
+    background-color: var(--cor4);
+    margin: -10px;
+    padding: 10px;
+    border-radius: 0px 0px 10px 10px;
+    line-height: 1.7em;
+}
+
+footer{
+    background-color: var(--cor0);
+    margin-top: 56px;
+}
+footer #logo1{
+    font-family: var(--font-logo);
+    font-size: 4em;
+    letter-spacing: 2px;
+    text-align: center;
+}
+footer .rodape{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;   
+    padding: 20px;
+    justify-content: space-around;
+}
+footer .menu{
+    font-family: sans-serif;
+    display: flex;
+    margin-left: 40px;
+    padding: 20px;
+}
+footer li{
+    list-style: none;
+    color: white;
+}
+footer li:hover{
+    text-decoration: underline;
+}
+footer h3{
+    padding-bottom: 5px;
+    color: black;
+}
+#email{
+    background-color: var(--cor3);
+    padding: 20px; 
+    border-radius: 10px;
+}
+.log{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;   
+    justify-content: space-around;
+    padding-top: 15px;
+}
+#subs{
+    background-color: var(--cor2);
+    padding: 10px;
+    border-radius: 10px;
+}
+#e {
+    background-color: var(--cor3);
+    padding: 10px;
+    margin-right: -35px;
+    border-radius: 10px;
+}
+#e:hover{
+    background-color: var(--cor4)
+}
